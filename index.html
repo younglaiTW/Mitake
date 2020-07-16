@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 10px;
+        }
+
+        body,
+        header,
+        ul,
+        li {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background-color: black;
+            color: #ccc;
+        }
+
+        .header-log {
+            height: 80px;
+            width: 45%;
+            float: left;
+        }
+
+        .header-log .icon {
+            height: 80px;
+            width: 100px;
+            float: left;
+            font-size: 3rem;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .header-log .title {
+            height: 98%;
+            float: left;
+        }
+
+        .header-log .title .top {
+            height: 60%;
+            font-size: 3rem;
+            bottom: 0;
+        }
+
+        .header-log .title .top span {
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .header-log .title .bottom {
+            height: 40%;
+            font-size: 1.3rem;
+        }
+
+        .header-menu {
+            float: right;
+            height: 80px;
+            line-height: 80px;
+            /* border: 1px solid white; */
+
+            /* display: none; */
+        }
+
+        .header-menu li {
+            list-style-type: none;
+            float: left;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .header-menu li a {
+            text-decoration: none;
+            color: white;
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+        }
+
+        .burger {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .header-log {
+                height: 80px;
+                width: 60%;
+                float: left;
+            }
+
+            .burger {
+                display: block;
+                float: right;
+                height: 80px;
+                line-height: 80px;
+                width: 10%;
+                color: white;
+                font-size: 4rem;
+                text-decoration: none;
+            }
+
+            .header-menu {
+                width: 100%;
+                float: none;
+                position: absolute;
+                z-index: 100;
+                /*header 80px+1px boder 線條*/
+                top: 80px;
+                left: 0;
+                right: 0;
+                max-height: 500px;
+
+            }
+
+            .header-menu li {
+                width: 100%;
+                background-color: green;
+                text-align: center;
+            }
+
+            .header-menu li a {
+                text-decoration: none;
+                color: white;
+                border: 0;
+                font-size: 1.8rem;
+                width: 100%;
+
+            }
+
+            /* .show {
+                max-height: 500px;
+            } */
+            .hidden {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var burger = document.getElementsByClassName('burger')[0];
+            burger.addEventListener("click", (e) => {
+                var menu = document.getElementsByClassName('header-menu')[0];
+
+                e.preventDefault();
+
+                if(menu.classList.contains('hidden'))
+                    menu.classList.remove('hidden');
+                else
+                    menu.classList.add('hidden');
+            });
+        };
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class='header-log'>
+            <div class="icon">
+                TDCC
+            </div>
+            <div class="title">
+                <div class="top">
+                    <span>股東e票通</span>
+                </div>
+                <div class="bottom">
+                    股東會電子投票平台
+                </div>
+            </div>
+        </div>
+
+        <ul class="header-menu">
+            <li><a href='#'>首頁</a></li>
+            <li><a href='#'>關於我們</a></li>
+            <li><a href='#'>活動消息</a></li>
+            <li><a href='#'>統計專區</a></li>
+            <li><a href='#'>Q&A</a></li>
+            <li><a href='#'>聯絡我們</a></li>
+            <li><a href='#'>登入</a></li>
+        </ul>
+
+        <a class="burger" href="#">
+            <span>☰</span>
+        </a>
+    </header>
+    <main></main>
+    <footer></footer>
+</body>
+
+</html>
