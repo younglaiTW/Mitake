@@ -71,11 +71,7 @@
 
         .header-menu {
             float: right;
-            height: 80px;
             line-height: 80px;
-            /* border: 1px solid white; */
-
-            /* display: none; */
         }
 
         .header-menu li {
@@ -99,7 +95,7 @@
         @media (max-width: 767px) {
             .header-log {
                 height: 80px;
-                width: 60%;
+                width: 70%;
                 float: left;
             }
 
@@ -119,12 +115,10 @@
                 float: none;
                 position: absolute;
                 z-index: 100;
-                /*header 80px+1px boder 線條*/
                 top: 80px;
                 left: 0;
                 right: 0;
-                max-height: 500px;
-
+                display: none;
             }
 
             .header-menu li {
@@ -139,29 +133,28 @@
                 border: 0;
                 font-size: 1.8rem;
                 width: 100%;
-
             }
 
-            /* .show {
-                max-height: 500px;
-            } */
-            .hidden {
-                display: none;
+            .show {
+                display: block;
             }
         }
     </style>
     <script>
         window.onload = function () {
             var burger = document.getElementsByClassName('burger')[0];
+
             burger.addEventListener("click", (e) => {
                 var menu = document.getElementsByClassName('header-menu')[0];
 
                 e.preventDefault();
-
-                if(menu.classList.contains('hidden'))
-                    menu.classList.remove('hidden');
-                else
-                    menu.classList.add('hidden');
+                
+                if (menu.classList.contains('show')) {
+                    menu.classList.remove('show');
+                }
+                else {
+                    menu.classList.add('show');
+                }
             });
         };
     </script>
