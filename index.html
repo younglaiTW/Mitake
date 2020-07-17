@@ -173,13 +173,13 @@
 
         .stockinfo {
             width: 100%;
-            border: 1px solid black;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
         }
 
         .stockinfo .middle {
             width: 1150px;
             margin: auto;
-            border: 1px solid black;
             padding-top: 30px;
         }
 
@@ -240,10 +240,109 @@
         .stockinfo .middle .frame2 .f2 {
             clear: both;
             width: 100%;
-            height: 300px;
-            border: 1px solid black;
             font-size: 1.5rem;
             line-height: 40px;
+        }
+
+        .stockinfo .middle .frame2 .f2 .f2title,
+        .stockinfo .middle .frame2 .f2 .f2content {
+            display: flow-root;
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+
+        .f2name,
+        .f2stock,
+        .f2vote,
+        .f2serivce,
+        .f2tel {
+            float: left;
+            height: 40px;
+            font-size: 1.8rem;
+            line-height: 40px;
+            text-align: center;
+            width: 20%;
+        }
+
+        .f2title .f2name,
+        .f2title .f2stock,
+        .f2title .f2vote,
+        .f2title .f2serivce,
+        .f2title .f2tel {
+            font-weight: bold;
+        }
+
+        .other {
+            display: flow-root;
+            width: 100%;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            padding-top: 50px;
+        }
+
+        .otheremp,
+        .otherimgs,
+        .otherlinks {
+            float: left;
+        }
+
+        .otheremp {
+            width: 25%;
+        }
+
+        .otherimgs {
+            width: 52%;
+        }
+
+        .otherlinks {
+            width: 23%;
+        }
+
+        .otherimg {
+            float: left;
+            width: 33%;
+        }
+
+        .linkframe {
+            width: 200px;
+            font-size: 1.8rem;
+            border: 1px solid black;
+            border-radius: 20px;
+            padding-left: 20px;
+        }
+
+        footer {
+            display: flow-root;
+            width: 100%;
+            border: 1px solid black;
+            font-size: 1.8rem;
+        }
+
+        .contact {
+            float: left;
+            width: 59%;
+            border-right: 1px solid black;
+            /* margin: 30px 0 0 30px; */
+        }
+
+        .contacttime {
+            float: left;
+            width: 70%;
+        }
+
+        .contactemail {
+            float: left;
+            width: 30%;
+        }
+
+        .links {
+            float: left;
+            width: 40%;
+        }
+
+        .linksimgs {
+            margin: 40px 0 0 40px;
         }
 
         @media (max-width: 767px) {
@@ -341,19 +440,91 @@
             }
 
             .stockinfo .middle .frame2 .f1 {
+                /* padding-left: 10%; */
                 width: 100%;
                 font-size: 2rem;
             }
 
             .stockinfo .middle .frame2 .f1 .title,
             .stockinfo .middle .frame2 .f1 .content {
-                width: 100%;
+                width: 90%;
                 height: 40px;
                 line-height: 40px;
+                margin-left: 10%;
             }
 
             .stockinfo .middle .frame2 .f1 .title {
                 text-align: left;
+            }
+
+            .stockinfo .middle .frame2 .f2 .f2title,
+            .stockinfo .middle .frame2 .f2 .f2content {
+                width: 80%;
+                margin: 20px auto;
+                border: 1px solid black;
+                /* padding: 10px; */
+            }
+
+            .stockinfo .middle .frame2 .f2 .f2title {
+                border: 0;
+            }
+
+            .f2name,
+            .f2stock,
+            .f2vote,
+            .f2serivce,
+            .f2tel {
+                text-align: left;
+            }
+
+            .f2name,
+            .f2stock,
+            .f2serivce,
+            .f2tel {
+                width: 50%;
+            }
+
+            .f2vote {
+                width: 50%;
+            }
+
+            .otheremp {
+                display: none;
+            }
+
+            .otherimgs,
+            .otherlinks {
+                width: 100%;
+            }
+
+            .otherimg {
+                width: 50%;
+            }
+
+            .otherimg div {
+                margin: 0 auto;
+                width: 140px;
+            }
+
+            .linkframe {
+                margin: auto;
+            }
+            footer {
+                width: 90%;
+            }
+
+            .contact {
+                width: 90%;
+                border: 0;
+            }
+
+            .contacttime,
+            .contactemail {
+                width: 90%;
+            }
+
+            .links {
+                width: 90%;
             }
         }
     </style>
@@ -471,16 +642,157 @@
                         </div>
                     </div>
                     <div class="f2">
-                        <span>首次使用設定</span>
+                        <div class="f2title">
+                            <div class="f2name">
+                                <span>證券代號／名稱</span>
+                            </div>
+                            <div class="f2stock">
+                                <span>股東會日期</span>
+                            </div>
+                            <div class="f2vote">
+                                <span>投票起迄日</span>
+                            </div>
+                            <div class="f2serivce">
+                                <span>服務單位</span>
+                            </div>
+                            <div class="f2tel">
+                                <span>聯絡電話</span>
+                            </div>
+                        </div>
+
+                        <div class="f2content">
+                            <div class="f2name">
+                                <span>6702 復興航空</span>
+                            </div>
+                            <div class="f2stock">
+                                <span>106/01/11</span>
+                            </div>
+                            <div class="f2vote">
+                                <span>105/12/27 ~ 106/01/08</span>
+                            </div>
+                            <div class="f2serivce">
+                                <span>群益金鼎證券</span>
+                            </div>
+                            <div class="f2tel">
+                                <span>(02)2703-500</span>
+                            </div>
+                        </div>
+                        <div class="f2content">
+                            <div class="f2name">
+                                <span>6702 復興航空</span>
+                            </div>
+                            <div class="f2stock">
+                                <span>106/01/11</span>
+                            </div>
+                            <div class="f2vote">
+                                <span>105/12/27 ~ 106/01/08</span>
+                            </div>
+                            <div class="f2serivce">
+                                <span>群益金鼎證券</span>
+                            </div>
+                            <div class="f2tel">
+                                <span>(02)2703-500</span>
+                            </div>
+                        </div>
+                        <div class="f2content">
+                            <div class="f2name">
+                                <span>6702 復興航空</span>
+                            </div>
+                            <div class="f2stock">
+                                <span>106/01/11</span>
+                            </div>
+                            <div class="f2vote">
+                                <span>105/12/27 ~ 106/01/08</span>
+                            </div>
+                            <div class="f2serivce">
+                                <span>群益金鼎證券</span>
+                            </div>
+                            <div class="f2tel">
+                                <span>(02)2703-500</span>
+                            </div>
+                        </div>
+                        <div class="f2content">
+                            <div class="f2name">
+                                <span>6702 復興航空</span>
+                            </div>
+                            <div class="f2stock">
+                                <span>106/01/11</span>
+                            </div>
+                            <div class="f2vote">
+                                <span>105/12/27 ~ 106/01/08</span>
+                            </div>
+                            <div class="f2serivce">
+                                <span>群益金鼎證券</span>
+                            </div>
+                            <div class="f2tel">
+                                <span>(02)2703-500</span>
+                            </div>
+                        </div>
+                        <div style="width: 100%; height: 200px;">
+                            &nbsp;
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="other">
+            <div class="otheremp">
+                &nbsp;
+            </div>
+            <div class="otherimgs">
+                <div class="otherimg">
+                    <div><img src="1.png" alt="empty" width="140" height="50"></div>
+                </div>
+                <div class="otherimg">
+                    <div><img src="2.png" alt="empty" width="140" height="50"></div>
+                </div>
+                <div class="otherimg">
+                    <div><img src="3.png" alt="empty" width="140" height="50"></div>
+                </div>
+                <div class="otherimg">
+                    <div><img src="4.png" alt="empty" width="140" height="50"></div>
+                </div>
+                <div class="otherimg">
+                    <div><img src="5.png" alt="empty" width="140" height="50"></div>
+                </div>
+                <div class="otherimg">
+                    <div><img src="6.png" alt="empty" width="140" height="50"></div>
+                </div>
+            </div>
+            <div class="otherlinks">
+                <div class="linkframe">
+                    <p>相關網站 more</p>
+                    <p>金融監督管理委員會</p>
+                    <p>臺灣證券交易所</p>
+                    <p>臺灣期貨交易所</p>
+                    <p>證券櫃檯買賣中心</p>
+                    <p>臺灣集保結算所</p>
+                </div>
+            </div>
+        </div>
+
     </main>
     <footer>
-
-
-
+        <div class="contact">
+            <div class="contacttime">
+                <p>聯絡我們：</p>
+                <p>週一至週五</p>
+                <p>08:00~20:00 電話：(02)3789-7555</p>
+                <p>08:30~17:30 電話：(02)2514-1125、(02)2514-1242</p>
+            </div>
+            <div class="contactemail">
+                <p>&nbsp;</p>
+                <p>E-Mail:tdcc@tdcc.com.tw</p>
+                <p>台北市復興北路363號11樓</p>
+            </div>
+        </div>
+        <div class="links">
+            <div class="linksimgs">
+                <img src="7.png" alt="empty" width="140">
+                <img src="8.png" alt="empty" width="140">
+            </div>
+        </div>
     </footer>
 </body>
 
