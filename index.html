@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Document</title>
     <style>
         html {
@@ -313,8 +313,16 @@
         }
 
         footer {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .footercontent {
             display: flow-root;
-            width: 100%;
+            width: 99%;
+            margin: auto;
             border: 1px solid black;
             font-size: 1.8rem;
         }
@@ -395,6 +403,7 @@
             main {
                 margin: 81px auto 0;
                 width: 99%;
+                border: 0;
             }
 
             .personal {
@@ -435,8 +444,13 @@
             .stockinfo .middle {
                 width: 100%;
                 margin: auto;
-                border: 1px solid black;
+                border: 0;
                 padding-top: 30px;
+            }
+
+            .middle .frame1,
+            .middle .frame2 {
+                border: 0;
             }
 
             .stockinfo .middle .frame2 .f1 {
@@ -451,6 +465,7 @@
                 height: 40px;
                 line-height: 40px;
                 margin-left: 10%;
+                border: 0;
             }
 
             .stockinfo .middle .frame2 .f1 .title {
@@ -462,7 +477,6 @@
                 width: 80%;
                 margin: 20px auto;
                 border: 1px solid black;
-                /* padding: 10px; */
             }
 
             .stockinfo .middle .frame2 .f2 .f2title {
@@ -768,23 +782,25 @@
 
     </main>
     <footer>
-        <div class="contact">
-            <div class="contacttime">
-                <p>聯絡我們：</p>
-                <p>週一至週五</p>
-                <p>08:00~20:00 電話：(02)3789-7555</p>
-                <p>08:30~17:30 電話：(02)2514-1125、(02)2514-1242</p>
+        <div class="footercontent">
+            <div class="contact">
+                <div class="contacttime">
+                    <p>聯絡我們：</p>
+                    <p>週一至週五</p>
+                    <p>08:00~20:00 電話：(02)3789-7555</p>
+                    <p>08:30~17:30 電話：(02)2514-1125、(02)2514-1242</p>
+                </div>
+                <div class="contactemail">
+                    <p>&nbsp;</p>
+                    <p>E-Mail:tdcc@tdcc.com.tw</p>
+                    <p>台北市復興北路363號11樓</p>
+                </div>
             </div>
-            <div class="contactemail">
-                <p>&nbsp;</p>
-                <p>E-Mail:tdcc@tdcc.com.tw</p>
-                <p>台北市復興北路363號11樓</p>
-            </div>
-        </div>
-        <div class="links">
-            <div class="linksimgs">
-                <img src="7.png" alt="empty" width="140">
-                <img src="8.png" alt="empty" width="140">
+            <div class="links">
+                <div class="linksimgs">
+                    <img src="7.png" alt="empty" width="140">
+                    <img src="8.png" alt="empty" width="140">
+                </div>
             </div>
         </div>
     </footer>
